@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ===== Meta básicas ===== -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Narciso Material de Construção | Vila Velha – ES</title>
+  <meta name="description" content="Materiais de construção em Vila Velha com entrega rápida, preço justo e atendimento especialista. Da base ao acabamento, a Narciso tem tudo para sua obra!" />
+  <link rel="canonical" href="https://narcisomaterial.com.br/" />
+  <meta name="theme-color" content="#003366" />
+
+  <!-- ===== Open Graph / Twitter ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Narciso Material de Construção" />
+  <meta property="og:title" content="Narciso Material de Construção | Vila Velha – ES" />
+  <meta property="og:description" content="Tudo para sua obra em um só lugar. Consulte nosso estoque pelo WhatsApp e receba em poucas horas." />
+  <meta property="og:url" content="https://narcisomaterial.com.br/" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===== Ícones & PWA ===== -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- ===== Fonts & Icons ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" async />
+
+  <!-- ===== JSON‑LD LocalBusiness ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HardwareStore",
+    "name": "Narciso Material de Construção",
+    "image": "https://narcisomaterial.com.br/assets/og-image.jpg",
+    "telephone": "+55-27-99925-9494",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Barra Nova, 195",
+      "addressLocality": "Vila Velha",
+      "addressRegion": "ES",
+      "postalCode": "29113-040",
+      "addressCountry": "BR"
+    },
+    "geo": {"@type": "GeoCoordinates","latitude": -20.3494097,"longitude": -40.3176873},
+    "url": "https://narcisomaterial.com.br/",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:00","closes":"12:00"}
+    ],
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"142"}
+  }
+  </script>
+
+  <!-- ===== Styles ===== -->
+  <style>
+    /* Variables */
+    :root{
+      --primary:#003366;--secondary:#e86b0e;--accent:#ff9933;
+      --light:#f5f5f5;--white:#fff;--dark:#333;--gray:#777;
+    }
+    /* Reset / base */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    .container{max-width:1200px;margin-inline:auto;padding-inline:20px}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:12px 24px;border:none;border-radius:5px;font-weight:600;cursor:pointer;transition:.3s}
+    .btn-primary{background:var(--primary);color:var(--white)} .btn-primary:hover{background:#004d99}
+    .btn-outline{background:transparent;border:2px solid var(--secondary);color:var(--secondary)} .btn-outline:hover{background:var(--secondary);color:var(--white)}
+    .btn-whatsapp{background:#25D366;color:var(--white)} .btn-whatsapp:hover{background:#128C7E}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:100;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+    .header-container{display:flex;justify-content:space-between;align-items:center;padding-block:15px}
+    .logo{display:flex;align-items:center;gap:8px}
+    .logo svg{height:50px}
+    .logo-text{font-size:1.4rem;font-weight:700;color:var(--primary)}
+    nav ul{display:flex;gap:28px}
+    nav a{font-weight:500;position:relative}
+    nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--secondary);transition:.3s}
+    nav a:hover::after{width:100%}
+    .mobile-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--primary)}
+
+    /* Hero */
+    .hero{background:linear-gradient(rgba(0,51,102,.8),rgba(0,51,102,.8)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fm=webp&q=80&fit=crop&w=1350') center/cover;padding:110px 0;text-align:center;color:var(--white)}
+    .hero h1{font-size:2.8rem;margin-bottom:14px}
+    .hero p{max-width:680px;margin-inline:auto;margin-bottom:26px;font-size:1.1rem}
+    .hero-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+    /* Quick cards */
+    .quick-access{margin-top:-60px;margin-bottom:70px}
+    .quick-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+    .quick-card{background:var(--white);border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);padding:28px;text-align:center;transition:transform .3s}
+    .quick-card:hover{transform:translateY(-10px)}
+    .quick-card i{font-size:2.3rem;color:var(--primary);margin-bottom:10px}
+
+    /* Section generic */
+    section{padding-block:80px}
+    .section-header{text-align:center;margin-bottom:50px}
+    .section-header h2{font-size:2rem;color:var(--primary);display:inline-block;position:relative;padding-bottom:10px}
+    .section-header h2::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:80px;height:3px;background:var(--secondary)}
+    .section-header p{max-width:700px;margin-inline:auto;margin-top:16px;color:var(--gray)}
+
+    /* About */
+    .about{background:var(--white)}
+    .about-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:40px;align-items:center}
+    .about-image{border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+    .about-text h3{font-size:1.5rem;color:var(--primary);margin-bottom:18px}
+    .feature-item{display:flex;align-items:center;margin-bottom:12px;color:var(--gray)}
+    .feature-item i{color:var(--secondary);margin-right:10px}
+
+    /* Products */
+    .products{background:var(--light)}
+    .product-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:30px}
+    .category-card{background:var(--white);border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.05);transition:transform .3s}
+    .category-card:hover{transform:translateY(-10px)}
+    .category-image{height:210px;overflow:hidden}
+    .category-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+    .category-card:hover .category-image img{transform:scale(1.1)}
+    .category-content{padding:20px}
+
+    /* Services */
+    .service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:30px}
+    .service-card{background:var(--white);border-radius:10px;padding:32px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.05);transition:.3s}
+    .service-card:hover{transform:translateY(-10px)}
+    .service-icon{width:85px;height:85px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:2rem;margin-inline:auto 22px}
+
+    /* Promotions */
+    .promotions{background:var(--light)}
+    .promotion-slider{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+    .promotion-slide{display:none}
+    .promotion-slide.active{display:block}
+    .promotion-image{position:relative;height:380px}
+    .promotion-image img{width:100%;height:100%;object-fit:cover}
+    .promotion-content{position:absolute;bottom:0;left:0;width:100%;padding:30px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:var(--white)}
+    .slider-nav{position:absolute;bottom:18px;right:18px;display:flex;gap:10px}
+    .slider-btn{width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.3);color:var(--white);font-size:1rem;cursor:pointer;transition:.3s}
+    .slider-btn:hover{background:var(--secondary)}
+
+    /* Instagram */
+    .instagram-feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+    .instagram-post{aspect-ratio:1;border-radius:10px;overflow:hidden;position:relative}
+    .instagram-post img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .instagram-post:hover img{transform:scale(1.05)}
+    .instagram-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s}
+    .instagram-post:hover .instagram-overlay{opacity:1}
+    .instagram-overlay i{color:var(--white);font-size:2rem}
+
+    /* Contact */
+    .contact{background:var(--light)}
+    .contact-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:40px}
+    .contact-info{background:var(--white);border-radius:10px;padding:35px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+    .info-item{display:flex;align-items:flex-start;margin-bottom:20px}
+    .info-icon{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-right:15px}
+
+    /* Footer */
+    footer{background:var(--primary);color:var(--white);padding-top:60px}
+    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
+    .footer-heading{font-size:1.3rem;margin-bottom:20px;position:relative;padding-bottom:10px}
+    .footer-heading::after{content:'';position:absolute;left:0;bottom:0;width:50px;height:2px;background:var(--secondary)}
+    .footer-links a{opacity:.8;transition:.3s}
+    .footer-links a:hover{opacity:1;color:var(--secondary);padding-left:6px}
+
+    /* Floats */
+    .whatsapp-float,.back-to-top{position:fixed;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,.2);z-index:998;transition:.3s}
+    .whatsapp-float{bottom:30px;right:30px;width:60px;height:60px;font-size:1.8rem;background:#25D366;color:var(--white)}
+    .whatsapp-float:hover{background:#128C7E;transform:scale(1.08)}
+    .back-to-top{bottom:30px;left:30px;width:50px;height:50px;font-size:1.2rem;background:var(--primary);color:var(--white);opacity:0;visibility:hidden}
+    .back-to-top.show{opacity:1;visibility:visible}
+    .back-to-top:hover{background:var(--secondary)}
+
+    /* Responsive */
+    @media(max-width:992px){
+      nav ul{position:fixed;top:82px;left:-100%;width:100%;height:calc(100vh-82px);background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:left .3s;z-index:997}
+      nav ul.active{left:0}
+      .mobile-toggle{display:block}
+      .hero h1{font-size:2.2rem}
+    }
+    @media(max-width:768px){
+      .promotion-image{height:300px}
+      .footer-content{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo" aria-label="Página inicial">
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="30" fill="#003366"/><path d="M15 20L30 15L45 20L30 25Z" fill="#e86b0e"/></svg>
+        <span class="logo-text">Narciso</span>
+      </a>
+      <nav>
+        <ul class="nav-menu" id="primary-nav">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#products">Produtos</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#promotions">Promoções</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Tudo para sua obra em um só lugar</h1>
+      <p>Há mais de 10 anos fornecendo materiais de qualidade para construção civil em Vila Velha e região.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Fale conosco</a>
+        <a href="#products" class="btn btn-outline">Ver produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quick Access ===== -->
+  <section class="quick-access">
+    <div class="container">
+      <div class="quick-cards">
+        <article class="quick-card"><i class="fas fa-truck-fast"></i><h3>Entrega rápida</h3><p>Para Vila Velha e região no mesmo dia.</p><a href="#services" class="btn btn-primary">Saiba mais</a></article>
+        <article class="quick-card"><i class="fas fa-tags"></i><h3>Ofertas especiais</h3><p>Promoções semanais com preços de atacado.</p><a href="#promotions" class="btn btn-primary">Ver ofertas</a></article>
+        <article class="quick-card"><i class="fas fa-map-marker-alt"></i><h3>Localização</h3><p>Rua Barra Nova 195 – Vale Encantado</p><a href="#contact" class="btn btn-primary">Como chegar</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <header class="section-header">
+        <h2>Sobre nós</h2>
+        <p>Conheça nossa história e compromisso com qualidade e preço justo.</p>
+      </header>
+      <div class="about-content">
+        <div class="about-image"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Loja Narciso" loading="lazy"></div>
+        <div class="about-text">
+          <h3>Tradição e confiança</h3>
+          <p>Nasceu do sonho de oferecer produtos de qualidade com atendimento diferenciado para Vila Velha.</p>
+          <p>Conquistamos a confiança de nossos clientes com compromisso e dedicação.</p>
+          <ul class="about-features">
+            <li class="feature-item"><i class="fas fa-check-circle"></i>10 anos de experiência</li>
+            <li class="feature-item"><i class="fas fa-check-circle"></i>Equipe qualificada</li>
+            <li class="feature-item"><i class="fas fa-check-circle"></i>Marcas líderes no mercado</li>
+            <li class="feature-item"><i class="fas fa-check-circle"></i>Entrega eficiente</li>
+            <li class="feature-item"><i class="fas fa-check-circle"></i>Avaliação 4.6⭐ no Google</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Products ===== -->
+  <section class="products" id="products">
+    <div class="container">
+      <header class="section-header">
+        <h2>Nossos produtos</h2>
+        <p>Materiais do alicerce ao acabamento.</p>
+      </header>
+      <div class="product-categories">
+        <article class="category-card">
+          <div class="category-image"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Materiais básicos" loading="lazy"></div>
+          <div class="category-content"><h3>Materiais básicos</h3><p>Cimento, areia, brita, blocos, tijolos.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
+        </article>
+        <article class="category-card">
+          <div class="category-image"><img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Elétrica e hidráulica" loading="lazy"></div>
+          <div class="category-content"><h3>Elétrica &amp; hidráulica</h3><p>Fios, cabos, tubos, conexões e acessórios.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
+        </article>
+        <article class="category-card">
+          <div class="category-image"><img src="https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Tintas e acabamentos" loading="lazy"></div>
+          <div class="category-content"><h3>Tintas &amp; acabamentos</h3><p>Tintas, vernizes, texturas.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
+        </article>
+        <article class="category-card">
+          <div class="category-image"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Ferramentas" loading="lazy"></div>
+          <div class="category-content"><h3>Ferramentas</h3><p>Manuais e elétricas para profissionais.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <header class="section-header">
+        <h2>Nossos serviços</h2>
+        <p>Facilitamos sua obra além de fornecer produtos.</p>
+      </header>
+      <div class="service-cards">
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-truck"></i></div>
+          <h3>Entrega rápida</h3>
+          <p>Entrega no mesmo dia para Vila Velha e região.</p>
+          <a href="#contact" class="btn btn-primary">Consultar</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Orçamento gratuito</h3>
+          <p>Envie a lista por WhatsApp e receba preços na hora.</p>
+          <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Solicitar</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Consultoria técnica</h3>
+          <p>Orientação para escolher os melhores materiais.</p>
+          <a href="#contact" class="btn btn-primary">Saiba mais</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Promotions ===== -->
+  <section class="promotions" id="promotions">
+    <div class="container">
+      <header class="section-header">
+        <h2>Ofertas e promoções</h2>
+        <p>Economize nos principais itens da sua obra.</p>
+      </header>
+      <div class="promotion-slider" aria-live="polite">
+        <article class="promotion-slide active">
+          <div class="promotion-image">
+            <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Oferta de cimento" loading="lazy">
+            <div class="promotion-content">
+              <h3>Super oferta de cimento</h3>
+              <p>Qualidade garantida com preços imbatíveis.</p>
+              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
+            </div>
+          </div>
+        </article>
+        <article class="promotion-slide">
+          <div class="promotion-image">
+            <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Promoção de tintas" loading="lazy">
+            <div class="promotion-content">
+              <h3>Tintas com preços especiais</h3>
+              <p>Interior e exterior, várias cores.</p>
+              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
+            </div>
+          </div>
+        </article>
+        <article class="promotion-slide">
+          <div class="promotion-image">
+            <img src="https://images.unsplash.com/photo-1601055283742-8b27e81b5553?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Promoção de ferramentas" loading="lazy">
+            <div class="promotion-content">
+              <h3>Ferramentas profissionais</h3>
+              <p>Durabilidade e desempenho garantidos.</p>
+              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
+            </div>
+          </div>
+        </article>
+        <div class="slider-nav">
+          <button class="slider-btn prev" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Instagram ===== -->
+  <section class="instagram">
+    <div class="container">
+      <div class="instagram-header"><i class="fab fa-instagram"></i><h3>Siga-nos no Instagram</h3></div>
+      <div class="instagram-feed">
+        <!-- 6 posts estáticos de exemplo -->
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1583248369069-9d91f1640fe6?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
+      </div>
+      <div class="instagram-link"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @narcisomaterialconstrucao</a></div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <header class="section-header">
+        <h2>Entre em contato</h2>
+        <p>Estamos sempre prontos para atender você.</p>
+      </header>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Informações</h3>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><p>Rua Barra Nova 195 – Vale Encantado, Vila Velha‑ES</p></div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><p><a href="tel:+5527999259494">(27) 99925‑9494</a></p></div>
+          <div class="info-item"><div class="info-icon"><i class="fab fa-whatsapp"></i></div><p><a href="https://wa.me/5527999259494" target="_blank" rel="noopener">(27) 99925‑9494</a></p></div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-clock"></i></div><p>Seg‑Sex: 07h–17h<br>Sábado: 07h–12h</p></div>
+        </div>
+        <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.1735993774307!2d-40.3176873!3d-20.3494097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83dcd7971cf75%3A0x9d9e3d7ee7a6d2f3!2sR.%20Barra%20Nova%2C%20195%20-%20Vale%20Encantado%2C%20Vila%20Velha%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1620000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Narciso"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <svg viewBox="0 0 60 60" height="60"><circle cx="30" cy="30" r="30" fill="#fff"/><path d="M15 20L30 15L45 20L30 25Z" fill="#e86b0e"/></svg>
+          <p>Narciso Material de Construção é a melhor opção em Vila Velha: do alicerce ao acabamento.</p>
+          <div class="social-links"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="https://wa.me/5527999259494" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></div>
+        </div>
+        <nav class="footer-links"><h4 class="footer-heading">Links rápidos</h4><ul><li><a href="#home">Início</a></li><li><a href="#about">Sobre</a></li><li><a href="#products">Produtos</a></li><li><a href="#services">Serviços</a></li><li><a href="#promotions">Promoções</a></li><li><a href="#contact">Contato</a></li></ul></nav>
+        <nav class="footer-links"><h4 class="footer-heading">Produtos</h4><ul><li><a href="#products">Materiais básicos</a></li><li><a href="#products">Elétrica &amp; hidráulica</a></li><li><a href="#products">Tintas</a></li><li><a href="#products">Ferramentas</a></li></ul></nav>
+        <div class="footer-links"><h4 class="footer-heading">Horário</h4><ul><li>Seg‑Sex: 07h–17h</li><li>Sábado: 07h–12h</li><li>Domingo: Fechado</li></ul></div>
+      </div>
+      <p style="text-align:center;padding:20px 0;border-top:1px solid rgba(255,255,255,.1);font-size:.9rem;opacity:.7">© 2025 Narciso Material de Construção.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Floats ===== -->
+  <a href="https://wa.me/5527999259494" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="back-to-top" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    // Mobile menu
+    const mobileToggle=document.querySelector('.mobile-toggle');
+    const navMenu=document.querySelector('.nav-menu');
+    mobileToggle.addEventListener('click',()=>{
+      navMenu.classList.toggle('active');
+      mobileToggle.innerHTML=navMenu.classList.contains('active')?'<i class=\"fas fa-times\"></i>':'<i class=\"fas fa-bars\"></i>';
+    });
+    navMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navMenu.classList.remove('active');mobileToggle.innerHTML='<i class=\"fas fa-bars\"></i>';}));
+    // Smooth scroll
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor=>anchor.addEventListener('click',e=>{
+      const target=document.querySelector(anchor.getAttribute('href'));
+      if(target){e.preventDefault();window.scrollTo({top:target.offsetTop-80,behavior:'smooth'});}
+    }));
+    // Back-to-top
+    const backBtn=document.querySelector('.back-to-top');
+    window.addEventListener('scroll',()=>{window.pageYOffset>300?backBtn.classList.add('show'):backBtn.classList.remove('show');});
+    // Slider
+    const slides=document.querySelectorAll('.promotion-slide');
+    const prev=document.querySelector('.slider-btn.prev');
+    const next=document.querySelector('.slider-btn.next');
+    let current=0;
+    function show(i){
+      slides.forEach(s=>s.classList.remove('active'));
+      current=(i+slides.length)%slides.length;
+      slides[current].classList.add('active');
+    }
+    prev.addEventListener('click',()=>show(current-1));
+    next.addEventListener('click',()=>show(current+1));
+    let auto=setInterval(()=>show(current+1),6000);
+    // Pause slider quando sai da viewport
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.intersectionRatio===0){clearInterval(auto);}else{auto=setInterval(()=>show(current+1),6000);}});});
+    observer.observe(document.querySelector('.promotion-slider'));
+  </script>
+</body>
+</html>
