@@ -1,520 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html data-theme="light" lang="pt-BR">
 <head>
-  <!-- ===== Meta básicas ===== -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Narciso Material de Construção | Vila Velha – ES</title>
-  <meta name="description" content="Materiais de construção em Vila Velha com entrega rápida, preço justo e atendimento especialista. Da base ao acabamento, a Narciso tem tudo para sua obra!" />
-  <link rel="canonical" href="https://narcisomaterial.com.br/" />
-  <meta name="theme-color" content="#003366" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000062" name="theme-color"/>
+<meta content="Na Narciso, em Vale Encantado, Vila Velha (ES), consulte ferramentas, tintas, materiais elétricos, hidráulicos e revestimentos. Orçamento pelo WhatsApp." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="pt_BR" property="og:locale"/>
+<meta content="Narciso Material de Construção" property="og:site_name"/>
+<meta content="Narciso Material de Construção em Vila Velha | Vale Encantado" property="og:title"/>
+<meta content="Ferramentas, tintas, elétrica, hidráulica e acessórios para reforma. Loja no Vale Encantado, Vila Velha. Peça orçamento no WhatsApp." property="og:description"/>
+<title>Material de Construção em Vila Velha | Narciso Vale Encantado</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 
-  <!-- ===== Open Graph / Twitter ===== -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Narciso Material de Construção" />
-  <meta property="og:title" content="Narciso Material de Construção | Vila Velha – ES" />
-  <meta property="og:description" content="Tudo para sua obra em um só lugar. Consulte nosso estoque pelo WhatsApp e receba em poucas horas." />
-  <meta property="og:url" content="https://narcisomaterial.com.br/" />
-  <meta property="og:image" content="assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ===== Ícones & PWA ===== -->
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="site.webmanifest" />
-
-  <!-- ===== Fonts & Icons ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" async />
-
-  <!-- ===== JSON‑LD LocalBusiness ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HardwareStore",
-    "name": "Narciso Material de Construção",
-    "image": "https://narcisomaterial.com.br/assets/og-image.jpg",
-    "telephone": "+55-27-99925-9494",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Barra Nova, 195",
-      "addressLocality": "Vila Velha",
-      "addressRegion": "ES",
-      "postalCode": "29113-040",
-      "addressCountry": "BR"
-    },
-    "geo": {"@type": "GeoCoordinates","latitude": -20.3494097,"longitude": -40.3176873},
-    "url": "https://narcisomaterial.com.br/",
-    "openingHoursSpecification": [
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:00","closes":"12:00"}
-    ],
-    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"142"}
-  }
-  </script>
-
-  <!-- ===== Styles ===== -->
-  <style>
-    /* Variables */
-    :root{
-      --primary:#003366;--secondary:#e86b0e;--accent:#ff9933;
-      --light:#f5f5f5;--white:#fff;--dark:#333;--gray:#777;
-    }
-    /* Reset / base */
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Montserrat',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    ul{list-style:none}
-    .container{max-width:1200px;margin-inline:auto;padding-inline:20px}
-
-    /* Buttons */
-    .btn{display:inline-block;padding:12px 24px;border:none;border-radius:5px;font-weight:600;cursor:pointer;transition:.3s}
-    .btn-primary{background:var(--primary);color:var(--white)} .btn-primary:hover{background:#004d99}
-    .btn-outline{background:transparent;border:2px solid var(--secondary);color:var(--secondary)} .btn-outline:hover{background:var(--secondary);color:var(--white)}
-    .btn-whatsapp{background:#25D366;color:var(--white)} .btn-whatsapp:hover{background:#128C7E}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:100;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.1)}
-    .header-container{display:flex;justify-content:space-between;align-items:center;padding-block:15px}
-    .logo{display:flex;align-items:center;gap:8px}
-    .logo svg{height:50px}
-    .logo-text{font-size:1.4rem;font-weight:700;color:var(--primary)}
-    nav ul{display:flex;gap:28px}
-    nav a{font-weight:500;position:relative}
-    nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--secondary);transition:.3s}
-    nav a:hover::after{width:100%}
-    .mobile-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--primary)}
-
-    /* Hero */
-    .hero{background:linear-gradient(rgba(0,51,102,.8),rgba(0,51,102,.8)),url('https://lh3.googleusercontent.com/geougc/AF1QipNJ7M68opPWUK2b_aY4mpMs3bSIGMZvVsrLJF6A=h305-no') center/cover;padding:110px 0;text-align:center;color:var(--white)}
-    .hero h1{font-size:2.8rem;margin-bottom:14px}
-    .hero p{max-width:680px;margin-inline:auto;margin-bottom:26px;font-size:1.1rem}
-    .hero-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-
-    /* Quick cards */
-    .quick-access{margin-top:-60px;margin-bottom:70px}
-    .quick-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-    .quick-card{background:var(--white);border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);padding:28px;text-align:center;transition:transform .3s}
-    .quick-card:hover{transform:translateY(-10px)}
-    .quick-card i{font-size:2.3rem;color:var(--primary);margin-bottom:10px}
-
-    /* Section generic */
-    section{padding-block:80px}
-    .section-header{text-align:center;margin-bottom:50px}
-    .section-header h2{font-size:2rem;color:var(--primary);display:inline-block;position:relative;padding-bottom:10px}
-    .section-header h2::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:80px;height:3px;background:var(--secondary)}
-    .section-header p{max-width:700px;margin-inline:auto;margin-top:16px;color:var(--gray)}
-
-    /* About */
-    .about{background:var(--white)}
-    .about-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:40px;align-items:center}
-    .about-image{border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-    .about-text h3{font-size:1.5rem;color:var(--primary);margin-bottom:18px}
-    .feature-item{display:flex;align-items:center;margin-bottom:12px;color:var(--gray)}
-    .feature-item i{color:var(--secondary);margin-right:10px}
-
-    /* Products */
-    .products{background:var(--light)}
-    .product-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:30px}
-    .category-card{background:var(--white);border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.05);transition:transform .3s}
-    .category-card:hover{transform:translateY(-10px)}
-    .category-image{height:210px;overflow:hidden}
-    .category-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-    .category-card:hover .category-image img{transform:scale(1.1)}
-    .category-content{padding:20px}
-
-    /* Services */
-    .service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:30px}
-    .service-card{background:var(--white);border-radius:10px;padding:32px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.05);transition:.3s}
-    .service-card:hover{transform:translateY(-10px)}
-    .service-icon{width:85px;height:85px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:2rem;margin-inline:auto 22px}
-
-    /* Promotions */
-    .promotions{background:var(--light)}
-    .promotion-slider{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-    .promotion-slide{display:none}
-    .promotion-slide.active{display:block}
-    .promotion-image{position:relative;height:380px}
-    .promotion-image img{width:100%;height:100%;object-fit:cover}
-    .promotion-content{position:absolute;bottom:0;left:0;width:100%;padding:30px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:var(--white)}
-    .slider-nav{position:absolute;bottom:18px;right:18px;display:flex;gap:10px}
-    .slider-btn{width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.3);color:var(--white);font-size:1rem;cursor:pointer;transition:.3s}
-    .slider-btn:hover{background:var(--secondary)}
-
-    /* Instagram */
-    .instagram-feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
-    .instagram-post{aspect-ratio:1;border-radius:10px;overflow:hidden;position:relative}
-    .instagram-post img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-    .instagram-post:hover img{transform:scale(1.05)}
-    .instagram-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s}
-    .instagram-post:hover .instagram-overlay{opacity:1}
-    .instagram-overlay i{color:var(--white);font-size:2rem}
-
-    /* Contact */
-    .contact{background:var(--light)}
-    .contact-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:40px}
-    .contact-info{background:var(--white);border-radius:10px;padding:35px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
-    .info-item{display:flex;align-items:flex-start;margin-bottom:20px}
-    .info-icon{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-right:15px}
-
-    /* Footer */
-    footer{background:var(--primary);color:var(--white);padding-top:60px}
-    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:40px}
-    .footer-heading{font-size:1.3rem;margin-bottom:20px;position:relative;padding-bottom:10px}
-    .footer-heading::after{content:'';position:absolute;left:0;bottom:0;width:50px;height:2px;background:var(--secondary)}
-    .footer-links a{opacity:.8;transition:.3s}
-    .footer-links a:hover{opacity:1;color:var(--secondary);padding-left:6px}
-
-    /* Floats */
-    .whatsapp-float,.back-to-top{position:fixed;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,.2);z-index:998;transition:.3s}
-    .whatsapp-float{bottom:30px;right:30px;width:60px;height:60px;font-size:1.8rem;background:#25D366;color:var(--white)}
-    .whatsapp-float:hover{background:#128C7E;transform:scale(1.08)}
-    .back-to-top{bottom:30px;left:30px;width:50px;height:50px;font-size:1.2rem;background:var(--primary);color:var(--white);opacity:0;visibility:hidden}
-    .back-to-top.show{opacity:1;visibility:visible}
-    .back-to-top:hover{background:var(--secondary)}
-
-    /* Responsive */
-    @media(max-width:900px){
-      nav ul{position:fixed;top:82px;left:-100%;width:100%;height:calc(100vh-82px);background:var(--white);flex-direction:column;align-items:center;justify-content:center;gap:40px;transition:left .3s;z-index:997}
-      nav ul.active{left:0}
-      .mobile-toggle{display:block}
-      .hero h1{font-size:2.2rem}
-    }
-    @media(max-width:768px){
-      .promotion-image{height:300px}
-      .footer-content{grid-template-columns:1fr}
-    }
-  </style>
-</head>
-<meta name="google-site-verification" content="m_WGkQudPKlSHd8RiWOfeLYdmvmbAXZ8cgXnuaK3FbU" />
+<meta content="https://narcisomaterial.netlify.app/" property="og:url"/><meta content="https://narcisomaterial.netlify.app/assets/og-narciso.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Narciso Material de Construção em Vila Velha, ES" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Narciso Material de Construção | Vila Velha" name="twitter:title"/><meta content="Sua loja de materiais de construção no Vale Encantado. Peça orçamento pelo WhatsApp." name="twitter:description"/><meta content="https://narcisomaterial.netlify.app/assets/og-narciso.jpg" name="twitter:image"/><link href="https://narcisomaterial.netlify.app/" rel="canonical"/><link href="assets/logo.webp" rel="icon" type="image/webp"/><link as="image" fetchpriority="high" href="assets/furadeira.webp" rel="preload" type="image/webp"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"HardwareStore","@id":"https://narcisomaterial.netlify.app/#loja","name":"Narciso Material de Construção","url":"https://narcisomaterial.netlify.app/","description":"Loja de materiais para construção e reforma em Vale Encantado, Vila Velha, ES. Consulte ferramentas, tintas, materiais elétricos, hidráulicos e itens para revestimentos.","telephone":"+55 27 99925-9494","email":"narcisomat195@gmail.com","image":"https://narcisomaterial.netlify.app/assets/og-narciso.jpg","logo":"https://narcisomaterial.netlify.app/assets/logo.webp","address":{"@type":"PostalAddress","streetAddress":"Rua Barra Nova, 195","addressLocality":"Vila Velha","addressRegion":"ES","postalCode":"29113-040","addressCountry":"BR"},"areaServed":{"@type":"City","name":"Vila Velha"},"sameAs":["https://www.instagram.com/narcisomaterialconstrucao/"],"hasMap":"https://www.google.com/maps/search/?api=1&query=Rua%20Barra%20Nova%20195%20Vale%20Encantado%20Vila%20Velha","hasOfferCatalog":{"@type":"OfferCatalog","name":"Categorias para consulta na Narciso","itemListElement":[{"@type":"OfferCatalog","name":"Ferramentas","url":"https://narcisomaterial.netlify.app/materiais/ferramentas/"},{"@type":"OfferCatalog","name":"Pisos e revestimentos","url":"https://narcisomaterial.netlify.app/materiais/revestimentos/"},{"@type":"OfferCatalog","name":"Hidráulica","url":"https://narcisomaterial.netlify.app/materiais/hidraulica/"},{"@type":"OfferCatalog","name":"Tintas e pintura","url":"https://narcisomaterial.netlify.app/materiais/tintas/"},{"@type":"OfferCatalog","name":"Materiais elétricos e cabos","url":"https://narcisomaterial.netlify.app/materiais/eletrica/"}]}}</script><link href="assets/site.css" rel="stylesheet"/></head>
 <body>
-  <!-- ===== Header ===== -->
-  <header>
-    <div class="container header-container">
-      <a href="#" class="logo" aria-label="Página inicial">
-        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="30" fill="#003366"/><path d="M15 20L30 15L45 20L30 25Z" fill="#e86b0e"/></svg>
-        <span class="logo-text">Narciso</span>
-      </a>
-      <nav>
-        <ul class="nav-menu" id="primary-nav">
-          <li><a href="#home">Início</a></li>
-          <li><a href="#about">Sobre Nós</a></li>
-          <li><a href="#products">Produtos</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#promotions">Promoções</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-        <button class="mobile-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
-      </nav>
-    </div>
-  </header>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-wa" viewbox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6a8.5 8.5 0 1 1 16.3-3.9Z"></path><path d="M8.5 8.6c.3-.4.6-.4.8-.1l1.1 1.4c.2.3.1.5-.1.8l-.5.5c.7 1.1 1.6 1.9 2.7 2.5l.5-.5c.3-.3.6-.3.8-.1l1.5.9c.3.2.4.4.2.8-.4.8-1.1 1.3-2 1.2-2.9-.4-5.8-3.3-6.2-6.1-.1-.7.4-1.1 1.2-1.3Z"></path></symbol>
+<symbol id="icon-arrow" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></symbol>
+<symbol id="icon-up" viewbox="0 0 24 24"><path d="m6 18 12-12M8 6h10v10"></path></symbol>
+<symbol id="icon-pin" viewbox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+<symbol id="icon-clock" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+<symbol id="icon-check" viewbox="0 0 24 24"><path d="m4 12 5 5L20 6"></path></symbol>
+<symbol id="icon-package" viewbox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 7v10l9 5 9-5V7M12 12v10"></path></symbol>
+<symbol id="icon-list" viewbox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M3 6h.01M3 12h.01M3 18h.01"></path></symbol>
+<symbol id="icon-sun" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></symbol>
+<symbol id="icon-moon" viewbox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"></path></symbol>
+<symbol id="icon-menu" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></symbol>
+<symbol id="icon-x" viewbox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"></path></symbol>
+<symbol id="icon-ig" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></symbol>
+<symbol id="icon-mail" viewbox="0 0 24 24"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m2 6 10 8 10-8"></path></symbol>
+</svg>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="utility"><div class="container utility-inner"><span><svg aria-hidden="true"><use href="#icon-pin"></use></svg> Rua Barra Nova, 195 · Vale Encantado, Vila Velha</span><a href="https://wa.me/5527999259494" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#icon-wa"></use></svg> (27) 99925-9494</a></div></div>
+<header class="header" id="header"><div class="container header-inner">
+<a aria-label="Narciso Material de Construção, início" class="brand" href="#inicio"><img alt="Marca N da Narciso com textura de tijolos laranjas" class="brand-image" height="150" src="assets/logo.webp" width="150"/><span><strong class="brand-word">Narciso</strong><small class="brand-sub">Material de construção</small></span></a>
+<nav aria-label="Navegação principal" class="nav" id="mainNav"><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#sobre">A Narciso</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></nav>
+<div class="header-actions"><button aria-label="Ativar modo escuro" aria-pressed="false" class="icon-button theme-toggle" id="themeButton" title="Alternar modo claro ou escuro"><svg aria-hidden="true" class="moon"><use href="#icon-moon"></use></svg><svg aria-hidden="true" class="sun"><use href="#icon-sun"></use></svg></button><a class="btn btn-orange desktop-cta" href="#orcamento">Pedir orçamento <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a><button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu" class="icon-button menu-button" id="menuButton"><svg aria-hidden="true"><use href="#icon-menu"></use></svg></button></div>
+</div></header>
+<main id="conteudo">
+<section aria-labelledby="heroTitle" class="hero" id="inicio"><div class="hero-layout"><div class="hero-content"><span class="eyebrow">Narciso Material de Construção · Vila Velha / ES</span><h1 id="heroTitle">Sua obra<br/>tem onde <em>começar.</em></h1><p class="hero-desc">Da ferramenta ao acabamento, encontre opções para construir e reformar. Mande sua lista e consulte a disponibilidade diretamente com a Narciso.</p><div class="hero-ctas"><a class="btn btn-orange" href="#orcamento"><svg aria-hidden="true"><use href="#icon-wa"></use></svg> Pedir orçamento</a><a class="hero-secondary" href="#produtos">Ver produtos <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a></div><div class="hero-note"><svg aria-hidden="true"><use href="#icon-pin"></use></svg> Loja física no bairro Vale Encantado</div></div><div class="hero-image"><img alt="Furadeira Black+Decker em demonstração, em imagem divulgada pela Narciso" decoding="async" fetchpriority="high" height="1313" loading="eager" src="assets/furadeira.webp" width="1050"/><span class="hero-image-label">Conheça nossa vitrine</span></div></div></section>
+<div class="facts"><div class="container facts-grid"><div class="fact"><svg aria-hidden="true"><use href="#icon-package"></use></svg><div><strong>Materiais para sua obra</strong><span>Do básico ao acabamento</span></div></div><div class="fact"><svg aria-hidden="true"><use href="#icon-list"></use></svg><div><strong>Orçamento pelo WhatsApp</strong><span>Envie sua lista de materiais</span></div></div><div class="fact"><svg aria-hidden="true"><use href="#icon-pin"></use></svg><div><strong>Loja física em Vila Velha</strong><span>Vale Encantado · Espírito Santo</span></div></div></div></div>
+<section aria-labelledby="productsTitle" class="section products" id="produtos"><div class="container"><div class="section-head reveal"><div><span class="eyebrow">Nossa vitrine</span><h2 id="productsTitle">O material certo para cada etapa.</h2><p>Ferramentas, soluções para revestimento, hidráulica, pintura e elétrica. Veja produtos que já apareceram na vitrine da Narciso e consulte as opções disponíveis.</p></div><a class="text-link" href="https://www.instagram.com/narcisomaterialconstrucao/" rel="noopener noreferrer" target="_blank">Ver nosso Instagram <svg aria-hidden="true"><use href="#icon-up"></use></svg></a></div>
+<div class="vitrine">
+<article class="product-card reveal"><img alt="Furadeira Black+Decker 12V anunciada pela Narciso" decoding="async" height="1313" loading="lazy" src="assets/furadeira.webp" width="1050"/><div class="product-card-bottom"><h3 class="category-name">Ferramentas</h3><a class="text-link" href="materiais/ferramentas/">Ver produtos e orientações →</a><a class="product-quote-link" data-category="Ferramentas" href="#orcamento">Pedir orçamento</a></div></article>
+<article class="product-card reveal"><img alt="Cunhas Cortag para nivelamento de pisos e revestimentos anunciadas pela Narciso" decoding="async" height="1313" loading="lazy" src="assets/nivelamento.webp" width="1050"/><div class="product-card-bottom"><h3 class="category-name">Revestimentos</h3><a class="text-link" href="materiais/revestimentos/">Ver produtos e orientações →</a><a class="product-quote-link" data-category="Pisos e revestimentos" href="#orcamento">Pedir orçamento</a></div></article>
+<article class="product-card reveal"><img alt="Caixa de gordura com cesto de limpeza Fortlev anunciada pela Narciso" decoding="async" height="1313" loading="lazy" src="assets/hidraulica.webp" width="1050"/><div class="product-card-bottom"><h3 class="category-name">Hidráulica</h3><a class="text-link" href="materiais/hidraulica/">Ver produtos e orientações →</a><a class="product-quote-link" data-category="Hidráulica" href="#orcamento">Pedir orçamento</a></div></article>
+<article class="product-card reveal"><img alt="Tinta acrílica elástica emborrachada Carfort anunciada pela Narciso" decoding="async" height="1313" loading="lazy" src="assets/tintas.webp" width="1050"/><div class="product-card-bottom"><h3 class="category-name">Tintas &amp; pintura</h3><a class="text-link" href="materiais/tintas/">Ver produtos e orientações →</a><a class="product-quote-link" data-category="Tintas e pintura" href="#orcamento">Pedir orçamento</a></div></article>
+<article class="product-card reveal"><img alt="Bobinas de cabos elétricos Corfio divulgadas pela Narciso" decoding="async" height="1313" loading="lazy" src="assets/eletrica.webp" width="1050"/><div class="product-card-bottom"><h3 class="category-name">Elétrica</h3><a class="text-link" href="materiais/eletrica/">Ver produtos e orientações →</a><a class="product-quote-link" data-category="Elétrica e cabos" href="#orcamento">Pedir orçamento</a></div></article>
+</div><div class="products-foot"><p>Fotos reais do conteúdo da Narciso. Marcas, preços e estoque devem ser confirmados no atendimento.</p><a class="text-link" href="#orcamento">Não encontrou o que precisa? Peça uma cotação <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a></div>
+</div></section>
+<section aria-labelledby="aboutTitle" class="section about" id="sobre"><div class="container about-grid"><div class="brand-panel reveal"><img alt="Logomarca original da Narciso, N de tijolos" decoding="async" height="150" loading="lazy" src="assets/logo.webp" width="150"/><span class="display-text">Narciso</span><span class="panel-small">Material de construção</span><span class="panel-bottom">Vale Encantado • Vila Velha / ES</span></div><div class="about-copy reveal"><span class="eyebrow">Perto de quem constrói</span><h2 id="aboutTitle">Sua loja de materiais em Vila Velha.</h2><p>Quem está construindo ou reformando sabe: escolher o material faz parte de cada etapa da obra. Na Narciso, você encontra uma loja física e um canal direto de contato para consultar produtos, marcas e orçamentos.</p><div class="about-points"><div class="about-point"><svg aria-hidden="true"><use href="#icon-check"></use></svg> Atendimento direto pelo WhatsApp</div><div class="about-point"><svg aria-hidden="true"><use href="#icon-check"></use></svg> Endereço físico no Vale Encantado</div><div class="about-point"><svg aria-hidden="true"><use href="#icon-check"></use></svg> Opções para construir, reformar e finalizar</div></div><a class="text-link" href="#contato">Ver endereço e contato <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a></div></div></section>
+<section aria-labelledby="localTitle" class="section local-seo" id="materiais-vila-velha"><div class="container local-seo-grid">
+<div><span class="eyebrow">Construir e reformar em Vila Velha</span><h2 id="localTitle">Materiais para sua obra no Vale Encantado.</h2><p>Se você procura uma loja de material de construção em Vila Velha, a Narciso está na Rua Barra Nova, 195, no bairro Vale Encantado. Você pode consultar ferramentas, tintas, itens de hidráulica, materiais elétricos e acessórios de acabamento por WhatsApp antes de visitar a loja.</p><p>Para agilizar o orçamento, envie o nome do produto, a quantidade, a medida ou bitola, e a marca desejada, quando houver. A equipe confirma opções e disponibilidade.</p><a class="text-link" href="#contato">Ver localização e formas de contato →</a></div>
+<div class="local-seo-aside"><h3>O que informar no orçamento</h3><ul><li><strong>Ferramentas:</strong> aplicação, modelo e voltagem.</li><li><strong>Pintura:</strong> área, ambiente e tipo de superfície.</li><li><strong>Hidráulica:</strong> diâmetro, peça e quantidade.</li><li><strong>Elétrica:</strong> bitola, cor e metragem do cabo.</li><li><strong>Pisos:</strong> metragem, formato da peça e acessórios.</li></ul><p>Não encontrou sua categoria? Envie uma lista completa de materiais.</p></div></div></section><section aria-labelledby="quoteTitle" class="section quote" id="orcamento"><div class="container quote-grid"><div class="quote-intro reveal"><span class="eyebrow">Vamos à sua lista</span><h2 id="quoteTitle">Pediu.<br/>Cotou.<br/><span>Resolveu.</span></h2><p>Não precisa procurar item por item no site. Conte à Narciso o que você precisa: montamos a mensagem e abrimos seu WhatsApp para enviar.</p><div class="quote-list"><span><svg aria-hidden="true"><use href="#icon-check"></use></svg> Sem criar conta ou fazer cadastro</span><span><svg aria-hidden="true"><use href="#icon-check"></use></svg> Você pode informar quantidades e medidas</span><span><svg aria-hidden="true"><use href="#icon-check"></use></svg> A loja confirma preço e disponibilidade</span></div></div><div class="quote-form reveal"><h3>O que você está procurando?</h3><p>Preencha o que souber. Os campos são opcionais.</p><form aria-label="Preparar pedido de orçamento por WhatsApp" id="quoteForm"><div class="field"><label for="personName">Seu nome</label><input autocomplete="name" id="personName" maxlength="80" name="name" placeholder="Como podemos chamar você?" type="text"/></div><div class="field"><label for="productCategory">Categoria de produtos</label><select id="productCategory" name="category"><option value="Materiais para construção em geral">Materiais para construção em geral</option><option value="Ferramentas">Ferramentas</option><option value="Pisos e revestimentos">Pisos e revestimentos</option><option value="Hidráulica">Hidráulica</option><option value="Tintas e pintura">Tintas e pintura</option><option value="Elétrica e cabos">Elétrica e cabos</option></select></div><div class="field"><label for="itemsList">Sua lista de materiais</label><textarea id="itemsList" maxlength="2500" name="items" placeholder="Ex.: 2 latas de tinta, 15 metros de fio, 1 furadeira..."></textarea></div><button class="btn btn-orange" type="submit"><svg aria-hidden="true"><use href="#icon-wa"></use></svg> Abrir orçamento no WhatsApp <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button><p class="form-note">Nenhum dado é armazenado neste site. Você confirma o envio no WhatsApp.</p></form></div></div></section>
+<section aria-labelledby="faqTitle" class="section faq" id="duvidas"><div class="container faq-grid"><div class="faq-copy reveal"><span class="eyebrow">Dúvidas frequentes</span><h2 id="faqTitle">Ficou alguma dúvida?</h2><p>Se não encontrou a informação que procura, mande uma mensagem para a loja.</p><a class="text-link" href="https://wa.me/5527999259494?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20materiais%20da%20loja." rel="noopener noreferrer" target="_blank">Perguntar pelo WhatsApp <svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a></div><div class="faq-list reveal"><details class="faq-item"><summary>Posso enviar minha lista de materiais pelo WhatsApp?</summary><div>Sim. Use o formulário de orçamento desta página ou fale diretamente no número (27) 99925-9494. Informe os itens, quantidades e medidas que souber.</div></details><details class="faq-item"><summary>Os produtos exibidos estão disponíveis na loja?</summary><div>As imagens mostram produtos apresentados pela Narciso, mas não são um catálogo de estoque em tempo real. Entre em contato para confirmar modelos, marcas, preços e disponibilidade.</div></details><details class="faq-item"><summary>A loja faz entregas?</summary><div>Consulte com a equipe a disponibilidade, regiões atendidas, valores e prazos de entrega antes de finalizar seu pedido.</div></details><details class="faq-item"><summary>Quais formas de pagamento vocês aceitam?</summary><div>As formas de pagamento e eventuais condições de parcelamento devem ser confirmadas com a loja no momento do orçamento.</div></details><details class="faq-item"><summary>Onde fica a Narciso Material de Construção?</summary><div>Na Rua Barra Nova, 195, Vale Encantado, Vila Velha – ES. Você pode abrir a rota no Google Maps na seção de contato.</div></details></div></div></section>
+<section aria-labelledby="contactTitle" class="section contact" id="contato"><div class="container contact-grid"><div class="contact-copy reveal"><span class="eyebrow">Fale com a Narciso</span><h2 id="contactTitle">Venha visitar a loja.</h2><p>Estamos no Vale Encantado, em Vila Velha. Quer perguntar sobre um produto antes de sair de casa? Fale com a equipe pelo WhatsApp.</p><div class="contact-line"><svg aria-hidden="true"><use href="#icon-pin"></use></svg><div><strong>Endereço</strong><span>Rua Barra Nova, 195 · Vale Encantado<br/>Vila Velha – ES · CEP 29113-040</span></div></div><div class="contact-line"><svg aria-hidden="true"><use href="#icon-wa"></use></svg><div><strong>WhatsApp</strong><a href="https://wa.me/5527999259494" rel="noopener noreferrer" target="_blank">(27) 99925-9494</a></div></div><div class="contact-line"><svg aria-hidden="true"><use href="#icon-mail"></use></svg><div><strong>E-mail</strong><a href="mailto:narcisomat195@gmail.com">narcisomat195@gmail.com</a></div></div><div class="contact-actions"><a class="btn btn-orange" href="https://wa.me/5527999259494?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20Narciso." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#icon-wa"></use></svg> Chamar no WhatsApp</a><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Narciso%20Material%20de%20Constru%C3%A7%C3%A3o%20Vila%20Velha" rel="noopener noreferrer" target="_blank">Como chegar <svg aria-hidden="true"><use href="#icon-up"></use></svg></a></div></div><div class="location-panel reveal"><div class="pin"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></div><div class="location-panel-content"><span class="small">Narciso · Vila Velha</span><h3>É aqui que a obra começa.</h3><p>Rua Barra Nova, 195, Vale Encantado. Abra a rota no mapa e venha até a Narciso.</p><a class="btn btn-white" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Barra%20Nova%20195%20Vale%20Encantado%20Vila%20Velha" rel="noopener noreferrer" target="_blank">Abrir rota no Maps <svg aria-hidden="true"><use href="#icon-up"></use></svg></a></div></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a aria-label="Narciso, voltar ao início" class="brand" href="#inicio"><img alt="Logo Narciso" class="brand-image" height="150" loading="lazy" src="assets/logo.webp" width="150"/><span><span class="brand-word">Narciso</span><small class="brand-sub">Material de construção</small></span></a><p class="footer-about">Materiais de construção, ferramentas e produtos para quem constrói e reforma em Vila Velha.</p><div class="footer-social"><a aria-label="Instagram da Narciso" href="https://www.instagram.com/narcisomaterialconstrucao/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#icon-ig"></use></svg></a><a aria-label="WhatsApp da Narciso" href="https://wa.me/5527999259494" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#icon-wa"></use></svg></a><a aria-label="E-mail da Narciso" href="mailto:narcisomat195@gmail.com"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></a></div></div><div><h3 class="footer-title">Explore</h3><nav aria-label="Navegação do rodapé" class="footer-links"><a href="#inicio">Início</a><a href="#produtos">Produtos</a><a href="#sobre">A Narciso</a><a href="#orcamento">Pedir orçamento</a><a href="#duvidas">Dúvidas</a><span class="footer-cat-label">Categorias:</span><a href="materiais/ferramentas/">Ferramentas</a><a href="materiais/revestimentos/">Pisos e revestimentos</a><a href="materiais/hidraulica/">Hidráulica</a><a href="materiais/tintas/">Tintas e pintura</a><a href="materiais/eletrica/">Materiais elétricos e cabos</a></nav></div><div><h3 class="footer-title">Contato</h3><div class="footer-links"><span>Rua Barra Nova, 195</span><span>Vale Encantado, Vila Velha / ES</span><a href="https://wa.me/5527999259494" rel="noopener noreferrer" target="_blank">(27) 99925-9494</a><a href="https://www.instagram.com/narcisomaterialconstrucao/" rel="noopener noreferrer" target="_blank">@narcisomaterialconstrucao</a></div></div></div><div class="footer-bottom"><p>© <span id="currentYear">2026</span> Narciso Material de Construção.</p><p>Vila Velha · Espírito Santo</p></div></div></footer>
+<a aria-label="Solicitar orçamento pelo WhatsApp" class="floating-wa" href="https://wa.me/5527999259494?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#icon-wa"></use></svg></a>
+<div aria-label="Ações rápidas" class="mobile-cta"><a class="btn btn-outline" href="#produtos">Ver produtos</a><a class="btn btn-orange" href="#orcamento"><svg aria-hidden="true"><use href="#icon-wa"></use></svg> Fazer orçamento</a></div>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="home">
-    <div class="container">
-      <h1>Tudo para sua obra em um só lugar</h1>
-      <p>Há mais de 10 anos fornecendo materiais de qualidade para construção civil em Vila Velha e região.</p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Fale conosco</a>
-        <a href="#products" class="btn btn-outline">Ver produtos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Quick Access ===== -->
-  <section class="quick-access">
-    <div class="container">
-      <div class="quick-cards">
-        <article class="quick-card"><i class="fas fa-truck-fast"></i><h3>Entrega rápida</h3><p>Para Vila Velha e região no mesmo dia.</p><a href="#services" class="btn btn-primary">Saiba mais</a></article>
-        <article class="quick-card"><i class="fas fa-tags"></i><h3>Ofertas especiais</h3><p>Promoções semanais com preços de atacado.</p><a href="#promotions" class="btn btn-primary">Ver ofertas</a></article>
-        <article class="quick-card"><i class="fas fa-map-marker-alt"></i><h3>Localização</h3><p>Rua Barra Nova 195 – Vale Encantado</p><a href="#contact" class="btn btn-primary">Como chegar</a></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About ===== -->
-  <section class="about" id="about">
-    <div class="container">
-      <header class="section-header">
-        <h2>Sobre nós</h2>
-        <p>Conheça nossa história e compromisso com qualidade e preço justo.</p>
-      </header>
-      <div class="about-content">
-        <div class="about-image"><img src="https://blog.maremaria.com.br/wp-content/uploads/2025/04/375273918_1798992173867283_1623424998546586365_n.jpg" alt="Loja Narciso" loading="lazy"></div>
-        <div class="about-text">
-          <h3>Tradição e confiança</h3>
-          <p>Nasceu do sonho de oferecer produtos de qualidade com atendimento diferenciado para Vila Velha.</p>
-          <p>Conquistamos a confiança de nossos clientes com compromisso e dedicação.</p>
-          <ul class="about-features">
-            <li class="feature-item"><i class="fas fa-check-circle"></i>10 anos de experiência</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i>Equipe qualificada</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i>Marcas líderes no mercado</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i>Entrega eficiente</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i>Avaliação 4.6⭐ no Google</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-   <!-- ===== Missão, Visão e Valores ===== -->
-  <section class="about" id="missao-visao-valores">
-    <div class="container">
-      <header class="section-header">
-        <h2>Missão, Visão e Valores</h2>
-      </header>
-      <div class="about-content">
-        <div class="about-text">
-          <h3>Missão</h3>
-          <p>Oferecer materiais de construção com qualidade superior, preços justos e atendimento diferenciado em Vila Velha e região.</p>
-
-          <h3>Visão</h3>
-          <p>Ser referência em confiança e qualidade no setor de materiais para construção no Espírito Santo.</p>
-
-          <h3>Valores</h3>
-          <ul class="about-features">
-            <li class="feature-item"><i class="fas fa-check-circle"></i> Transparência</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i> Compromisso com o cliente</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i> Ética</li>
-            <li class="feature-item"><i class="fas fa-check-circle"></i> Sustentabilidade</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ Section ===== -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <header class="section-header">
-        <h2>Perguntas Frequentes</h2>
-      </header>
-      <details>
-        <summary>Vocês realizam entregas para quais regiões?</summary>
-        <p>Realizamos entregas rápidas para Vila Velha, Vitória, Serra e Cariacica.</p>
-      </details>
-      <details>
-        <summary>Posso fazer um orçamento pelo WhatsApp?</summary>
-        <p>Sim! Envie sua lista de materiais para (27) 99925‑9494 e receba orçamento rapidamente.</p>
-      </details>
-      <details>
-        <summary>Quais formas de pagamento são aceitas?</summary>
-        <p>Aceitamos cartões de crédito, débito, PIX e transferência bancária.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- JSON-LD FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Vocês realizam entregas para quais regiões?", "acceptedAnswer": {"@type": "Answer", "text": "Realizamos entregas rápidas para Vila Velha, Vitória, Serra e Cariacica."}},
-      {"@type": "Question", "name": "Posso fazer um orçamento pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sim! Envie sua lista de materiais para (27) 99925‑9494 e receba orçamento rapidamente."}},
-      {"@type": "Question", "name": "Quais formas de pagamento são aceitas?", "acceptedAnswer": {"@type": "Answer", "text": "Aceitamos cartões de crédito, débito, PIX e transferência bancária."}}
-    ]
-  }
-  </script>
-
-  <!-- ===== Products ===== -->
-  <section class="products" id="products">
-    <div class="container">
-      <header class="section-header">
-        <h2>Nossos produtos</h2>
-        <p>Materiais do alicerce ao acabamento.</p>
-      </header>
-      <div class="product-categories">
-        <article class="category-card">
-          <div class="category-image"><img src="https://blog.maremaria.com.br/wp-content/uploads/2025/04/Story-Material-De-Construcao-Equipe-Reforma-Criativo-Laranja-E-Azul-811-x-540-px.jpg" alt="Materiais básicos" loading="lazy"></div>
-          <div class="category-content"><h3>Materiais básicos</h3><p>Cimento, areia, brita, blocos, tijolos.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
-        </article>
-        <article class="category-card">
-          <div class="category-image"><img src="https://blog.maremaria.com.br/wp-content/uploads/2025/04/Story-Material-De-Construcao-Equipe-Reforma-Criativo-Laranja-E-Azul-811-x-540-px-1.jpg" alt="Elétrica e hidráulica" loading="lazy"></div>
-          <div class="category-content"><h3>Elétrica &amp; hidráulica</h3><p>Fios, cabos, tubos, conexões e acessórios.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
-        </article>
-        <article class="category-card">
-          <div class="category-image"><img src="https://blog.maremaria.com.br/wp-content/uploads/2025/04/Story-Material-De-Construcao-Equipe-Reforma-Criativo-Laranja-E-Azul-811-x-540-px-2.jpg" alt="Tintas e acabamentos" loading="lazy"></div>
-          <div class="category-content"><h3>Tintas &amp; acabamentos</h3><p>Tintas, vernizes, texturas.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
-        </article>
-        <article class="category-card">
-          <div class="category-image"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Ferramentas" loading="lazy"></div>
-          <div class="category-content"><h3>Ferramentas</h3><p>Manuais e elétricas para profissionais.</p><a href="#contact" class="btn btn-outline">Consultar</a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section class="services" id="services">
-    <div class="container">
-      <header class="section-header">
-        <h2>Nossos serviços</h2>
-        <p>Facilitamos sua obra além de fornecer produtos.</p>
-      </header>
-      <div class="service-cards">
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-truck"></i></div>
-          <h3>Entrega rápida</h3>
-          <p>Entrega no mesmo dia para Vila Velha e região.</p>
-          <a href="#contact" class="btn btn-primary">Consultar</a>
-        </article>
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-calculator"></i></div>
-          <h3>Orçamento gratuito</h3>
-          <p>Envie a lista por WhatsApp e receba preços na hora.</p>
-          <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Solicitar</a>
-        </article>
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-headset"></i></div>
-          <h3>Consultoria técnica</h3>
-          <p>Orientação para escolher os melhores materiais.</p>
-          <a href="#contact" class="btn btn-primary">Saiba mais</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Promotions ===== -->
-  <section class="promotions" id="promotions">
-    <div class="container">
-      <header class="section-header">
-        <h2>Ofertas e promoções</h2>
-        <p>Economize nos principais itens da sua obra.</p>
-      </header>
-      <div class="promotion-slider" aria-live="polite">
-        <article class="promotion-slide active">
-          <div class="promotion-image">
-            <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Oferta de cimento" loading="lazy">
-            <div class="promotion-content">
-              <h3>Super oferta de cimento</h3>
-              <p>Qualidade garantida com preços imbatíveis.</p>
-              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
-            </div>
-          </div>
-        </article>
-        <article class="promotion-slide">
-          <div class="promotion-image">
-            <img src="https://images.unsplash.com/photo-1595814433015-e6f5ce69614e?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Promoção de tintas" loading="lazy">
-            <div class="promotion-content">
-              <h3>Tintas com preços especiais</h3>
-              <p>Interior e exterior, várias cores.</p>
-              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
-            </div>
-          </div>
-        </article>
-        <article class="promotion-slide">
-          <div class="promotion-image">
-            <img src="https://images.unsplash.com/photo-1601055283742-8b27e81b5553?auto=format&fm=webp&q=80&fit=crop&w=1350" alt="Promoção de ferramentas" loading="lazy">
-            <div class="promotion-content">
-              <h3>Ferramentas profissionais</h3>
-              <p>Durabilidade e desempenho garantidos.</p>
-              <a href="https://wa.me/5527999259494" class="btn btn-whatsapp" target="_blank" rel="noopener">Consultar preço</a>
-            </div>
-          </div>
-        </article>
-        <div class="slider-nav">
-          <button class="slider-btn prev" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-btn next" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Instagram ===== -->
-  <section class="instagram">
-    <div class="container">
-      <div class="instagram-header"><i class="fab fa-instagram"></i><h3>Siga-nos no Instagram</h3></div>
-      <div class="instagram-feed">
-        <!-- 6 posts estáticos de exemplo -->
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1583248369069-9d91f1640fe6?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-        <article class="instagram-post"><img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fm=webp&q=60&w=500" alt="" loading="lazy"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="instagram-overlay" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></article>
-      </div>
-      <div class="instagram-link"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @narcisomaterialconstrucao</a></div>
-    </div>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <header class="section-header">
-        <h2>Entre em contato</h2>
-        <p>Estamos sempre prontos para atender você.</p>
-      </header>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Informações</h3>
-          <div class="info-item"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><p>Rua Barra Nova 195 – Vale Encantado, Vila Velha‑ES</p></div>
-          <div class="info-item"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><p><a href="tel:+5527999259494">(27) 99925‑9494</a></p></div>
-          <div class="info-item"><div class="info-icon"><i class="fab fa-whatsapp"></i></div><p><a href="https://wa.me/5527999259494" target="_blank" rel="noopener">(27) 99925‑9494</a></p></div>
-          <div class="info-item"><div class="info-icon"><i class="fas fa-clock"></i></div><p>Seg‑Sex: 07h–17h<br>Sábado: 07h–12h</p></div>
-        </div>
-        <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.1735993774307!2d-40.3176873!3d-20.3494097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83dcd7971cf75%3A0x9d9e3d7ee7a6d2f3!2sR.%20Barra%20Nova%2C%20195%20-%20Vale%20Encantado%2C%20Vila%20Velha%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1620000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Narciso"></iframe></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-about">
-          <svg viewBox="0 0 60 60" height="60"><circle cx="30" cy="30" r="30" fill="#fff"/><path d="M15 20L30 15L45 20L30 25Z" fill="#e86b0e"/></svg>
-          <p>Narciso Material de Construção é a melhor opção em Vila Velha: do alicerce ao acabamento.</p>
-          <div class="social-links"><a href="https://www.instagram.com/narcisomaterialconstrucao/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a><a href="https://wa.me/5527999259494" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></div>
-        </div>
-        <nav class="footer-links"><h4 class="footer-heading">Links rápidos</h4><ul><li><a href="#home">Início</a></li><li><a href="#about">Sobre</a></li><li><a href="#products">Produtos</a></li><li><a href="#services">Serviços</a></li><li><a href="#promotions">Promoções</a></li><li><a href="#contact">Contato</a></li></ul></nav>
-        <nav class="footer-links"><h4 class="footer-heading">Produtos</h4><ul><li><a href="#products">Materiais básicos</a></li><li><a href="#products">Elétrica &amp; hidráulica</a></li><li><a href="#products">Tintas</a></li><li><a href="#products">Ferramentas</a></li></ul></nav>
-        <div class="footer-links"><h4 class="footer-heading">Horário</h4><ul><li>Seg‑Sex: 07h–17h</li><li>Sábado: 07h–12h</li><li>Domingo: Fechado</li></ul></div>
-      </div>
-      <p style="text-align:center;padding:20px 0;border-top:1px solid rgba(255,255,255,.1);font-size:.9rem;opacity:.7">© 2025 Narciso Material de Construção.</p>
-    </div>
-  </footer>
-
-  <!-- ===== Floats ===== -->
-  <a href="https://wa.me/5527999259494" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-  <a href="#" class="back-to-top" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
-
-  <!-- ===== JavaScript ===== -->
-  <script>
-    // Mobile menu
-    const mobileToggle=document.querySelector('.mobile-toggle');
-    const navMenu=document.querySelector('.nav-menu');
-    mobileToggle.addEventListener('click',()=>{
-      navMenu.classList.toggle('active');
-      mobileToggle.innerHTML=navMenu.classList.contains('active')?'<i class=\"fas fa-times\"></i>':'<i class=\"fas fa-bars\"></i>';
-    });
-    navMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navMenu.classList.remove('active');mobileToggle.innerHTML='<i class=\"fas fa-bars\"></i>';}));
-    // Smooth scroll
-    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor=>anchor.addEventListener('click',e=>{
-      const target=document.querySelector(anchor.getAttribute('href'));
-      if(target){e.preventDefault();window.scrollTo({top:target.offsetTop-80,behavior:'smooth'});}
-    }));
-    // Back-to-top
-    const backBtn=document.querySelector('.back-to-top');
-    window.addEventListener('scroll',()=>{window.pageYOffset>300?backBtn.classList.add('show'):backBtn.classList.remove('show');});
-    // Slider
-    const slides=document.querySelectorAll('.promotion-slide');
-    const prev=document.querySelector('.slider-btn.prev');
-    const next=document.querySelector('.slider-btn.next');
-    let current=0;
-    function show(i){
-      slides.forEach(s=>s.classList.remove('active'));
-      current=(i+slides.length)%slides.length;
-      slides[current].classList.add('active');
-    }
-    prev.addEventListener('click',()=>show(current-1));
-    next.addEventListener('click',()=>show(current+1));
-    let auto=setInterval(()=>show(current+1),6000);
-    // Pause slider quando sai da viewport
-    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.intersectionRatio===0){clearInterval(auto);}else{auto=setInterval(()=>show(current+1),6000);}});});
-    observer.observe(document.querySelector('.promotion-slider'));
-  </script>
-</body>
+<script defer="True" src="assets/site.js"></script></body>
 </html>
