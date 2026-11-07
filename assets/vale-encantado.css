@@ -1,0 +1,105 @@
+
+/* Página local da Narciso — complementa o design system existente. */
+.ve-crumb{background:var(--surface);border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.ve-crumb .container{padding-block:12px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.ve-crumb a{color:var(--ink);font-weight:600}.ve-crumb a:hover{color:var(--orange)}
+.ve-hero{background:#050657;color:#fff;overflow:hidden}
+.ve-hero-inner{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);max-width:1600px;margin:0 auto;min-height:620px}
+.ve-hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:78px clamp(24px,6vw,105px) 78px max(24px,calc((100vw - 1220px)/2));position:relative;z-index:1}
+.ve-kicker{font-size:11px;letter-spacing:.15em;font-weight:700;text-transform:uppercase;color:#ffb67f;display:flex;gap:10px;align-items:center}
+.ve-kicker::before{content:"";width:26px;height:3px;background:var(--orange)}
+.ve-hero h1{font-family:var(--heading);font-size:clamp(48px,5.8vw,90px);line-height:.94;letter-spacing:-.02em;max-width:740px;margin:24px 0;text-transform:uppercase}
+.ve-hero h1 span{color:#ff873e;display:block}
+.ve-hero-lead{font-size:clamp(15px,1.5vw,18px);max-width:540px;line-height:1.7;color:#e5e7fb}
+.ve-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}
+.ve-actions .btn{min-height:54px;padding-inline:24px}.ve-actions .btn-outline{color:#fff;background:transparent;border:1px solid #b2b7de}.ve-actions .btn-outline:hover{border-color:#ff873e}
+.ve-hero-address{margin:29px 0 0;padding-top:19px;border-top:1px solid rgba(255,255,255,.24);color:#dee0f3;display:flex;align-items:flex-start;gap:9px;font-size:13px}
+.ve-hero-address svg{width:18px;height:18px;flex:none;color:#ff9857}
+.ve-hero-media{position:relative;min-height:540px;overflow:hidden;background:#121338}
+.ve-hero-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 42%}
+.ve-photo-credit{position:absolute;bottom:25px;left:24px;background:#fff;color:#03044c;padding:8px 12px;font-size:10px;text-transform:uppercase;font-weight:700;letter-spacing:.07em}
+.ve-info-strip{background:#fff;border-bottom:1px solid #e2e4ed}
+.ve-info-strip .container{display:flex;gap:24px;align-items:center;justify-content:space-between;padding-block:17px}
+.ve-info-strip a,.ve-info-strip span{font-size:12px;font-weight:650;color:#000062;display:flex;align-items:center;gap:9px}
+.ve-info-strip svg{height:18px;width:18px;color:var(--orange)}
+.ve-section{padding:82px 0;background:var(--surface)}
+.ve-section.alt{background:var(--paper)}
+.ve-section h2,.ve-contact h2{font-size:clamp(42px,4.8vw,70px);max-width:850px;line-height:.98;letter-spacing:-.01em;margin:14px 0 20px}
+.ve-section-head{max-width:820px;margin-bottom:30px}
+.ve-section-head p{color:var(--muted);font-size:16px;line-height:1.7}
+.ve-intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);gap:65px;align-items:start}
+.ve-intro .prose p{font-size:16px;line-height:1.8;max-width:740px;color:var(--muted);margin-bottom:18px}
+.ve-address-card{background:#000062;color:#fff;padding:30px 32px;border-top:5px solid var(--orange)}
+.ve-address-card strong{display:block;font-size:22px;line-height:1.35;margin:18px 0}
+.ve-address-card p{color:#dddef3;font-size:14px;margin-bottom:21px}
+.ve-address-card .btn{width:100%}
+.ve-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#ffa66e}
+.ve-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ve-category{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .2s,border-color .2s}
+.ve-category:hover{transform:translateY(-3px);border-color:var(--orange)}
+.ve-category-media{height:230px;background:var(--paper);overflow:hidden;position:relative}
+.ve-category-media img{width:100%;height:100%;object-fit:cover;object-position:center 46%;transition:transform .3s}
+.ve-category:hover img{transform:scale(1.035)}
+.ve-category-copy{padding:23px 23px 25px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.ve-category-copy h3{font-family:var(--heading);text-transform:uppercase;font-size:32px;font-weight:800;margin:0 0 10px;line-height:.98}
+.ve-category-copy p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 20px}
+.ve-category-link{margin-top:auto;color:var(--orange);font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:7px}
+.ve-tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);background:var(--surface)}
+.ve-tip{padding:29px 28px;border-right:1px solid var(--line)}
+.ve-tip:last-child{border-right:none}
+.ve-tip b{display:block;color:var(--orange);font-family:var(--heading);font-size:28px;margin-bottom:15px}
+.ve-tip h3{font-size:23px;font-family:var(--heading);text-transform:uppercase;margin:0 0 10px}
+.ve-tip p{font-size:14px;color:var(--muted);line-height:1.7;margin:0}
+.ve-contact{background:#060754;color:#fff;padding:85px 0}
+.ve-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.ve-contact h2{font-size:clamp(44px,4.8vw,70px)}
+.ve-contact p{color:#d8dbf6;font-size:16px;line-height:1.8;max-width:480px}
+.ve-contact .ve-kicker{margin-bottom:10px}
+.ve-form{background:#fff;color:#22264a;padding:32px}
+.ve-form .form-title{font-family:var(--heading);font-size:30px;text-transform:uppercase;font-weight:800;margin:0 0 4px;line-height:1}
+.ve-form .form-sub{color:#5b6374;font-size:13px;line-height:1.5;margin:0 0 20px}
+.ve-form label{font-weight:700;display:block;color:#161b35;font-size:13px;margin-bottom:7px}
+.ve-form input,.ve-form select,.ve-form textarea{width:100%;background:#fff;color:#11152f;border:1px solid #c9ced9;border-radius:3px;min-height:48px;padding:12px;display:block;margin:0 0 18px}
+.ve-form textarea{resize:vertical;min-height:108px;line-height:1.5}
+.ve-form input:focus,.ve-form select:focus,.ve-form textarea:focus{border-color:#000062}
+.ve-form button{width:100%;min-height:52px}
+.ve-form-error{color:#b32020;font-size:13px;font-weight:700;margin:-7px 0 14px}
+.ve-form-note{font-size:12px;color:#656c7c;margin:12px 0 0!important;line-height:1.5!important}
+.ve-faq{max-width:960px;margin:auto}
+.ve-faq-list{margin-top:33px;border-top:1px solid var(--line)}
+.ve-faq details{border-bottom:1px solid var(--line);padding:17px 0}
+.ve-faq summary{display:list-item;cursor:pointer;font-size:16px;font-weight:700;line-height:1.55;padding:4px 26px 4px 2px}
+.ve-faq details p{font-size:14px;color:var(--muted);line-height:1.8;margin:13px 30px 7px 2px}
+.ve-final{background:var(--surface);border-top:1px solid var(--line);padding:49px 0 56px}
+.ve-final-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.ve-final h2{font-size:clamp(34px,4vw,52px);margin:5px 0 10px}
+.ve-final p{max-width:640px;color:var(--muted);font-size:14px;margin:0}
+.ve-final .btn{flex:none}
+@media(max-width:1050px){.ve-hero-copy{padding-left:32px}.ve-categories{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+.ve-hero-inner{display:flex;flex-direction:column}.ve-hero-copy{padding:52px 24px 45px}
+.ve-hero h1{font-size:clamp(48px,11.8vw,72px);margin:19px 0}.ve-hero-media{min-height:345px}
+.ve-hero-address{margin-top:22px}.ve-info-strip .container{flex-wrap:wrap;gap:13px}
+.ve-info-strip .container>*{width:calc(50% - 10px);font-size:11px}
+.ve-intro,.ve-contact-grid{grid-template-columns:1fr;gap:28px}
+.ve-section{padding:65px 0}.ve-categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ve-tips{grid-template-columns:1fr}.ve-tip{border-right:0;border-bottom:1px solid var(--line)}
+.ve-tip:last-child{border-bottom:none}.ve-final-inner{flex-direction:column;align-items:flex-start}
+.ve-contact{padding:65px 0 76px}
+}
+@media(max-width:520px){
+.ve-hero-copy{padding:46px 20px 40px}.ve-hero h1{font-size:51px}
+.ve-hero-lead{font-size:15px}.ve-actions{width:100%;display:grid;grid-template-columns:1fr}
+.ve-hero-media{min-height:305px}.ve-photo-credit{bottom:17px;left:16px}
+.ve-info-strip .container>*{width:100%}.ve-categories{grid-template-columns:1fr}
+.ve-category{display:grid;grid-template-columns:120px 1fr;min-height:172px}
+.ve-category-media{height:100%;min-height:172px}.ve-category-copy{padding:19px}
+.ve-category-copy h3{font-size:27px}.ve-category-copy p{font-size:12px;margin-bottom:10px}
+.ve-address-card,.ve-form{padding:25px}
+.ve-form .form-title{font-size:28px}
+.ve-section h2,.ve-contact h2{font-size:clamp(40px,11vw,60px)}
+.ve-section{padding:55px 0}.ve-contact{padding:55px 0 86px}
+.ve-final .btn{width:100%}
+}
+@media(max-width:360px){.ve-category{grid-template-columns:96px 1fr}.ve-category-copy{padding:14px}.ve-category-copy h3{font-size:24px}.ve-hero h1{font-size:43px}}
+@media(prefers-reduced-motion:reduce){.ve-category,.ve-category-media img,.ve-actions .btn{transition:none!important}}
