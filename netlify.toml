@@ -2,6 +2,18 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "http://narcisomaterial.netlify.app/*"
+  to = "https://narcisomaterial.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://narcisomaterial.netlify.app/*"
+  to = "https://narcisomaterial.com.br/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
