@@ -2,6 +2,25 @@
 [build]
   publish = "."
 
+# Consolidate HTTP/HTTPS and www variants on the official HTTPS apex host.
+[[redirects]]
+  from = "http://www.narcisomaterial.com.br/*"
+  to = "https://narcisomaterial.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.narcisomaterial.com.br/*"
+  to = "https://narcisomaterial.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://narcisomaterial.com.br/*"
+  to = "https://narcisomaterial.com.br/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "http://narcisomaterial.netlify.app/*"
   to = "https://narcisomaterial.com.br/:splat"
