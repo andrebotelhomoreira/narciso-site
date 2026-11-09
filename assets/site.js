@@ -61,4 +61,51 @@
       reveals.forEach(el=>observer.observe(el));
     } else {reveals.forEach(el=>el.classList.add('visible'));}
   })();
-  
+
+  // GA4 da Narciso: não envia texto de orçamento, telefone, query string ou dados pessoais.
+  (() => {
+    const measurementId = 'G-QGH5GMDCHL';
+    if (window.__narcisoGaInitialized) return;
+    window.__narcisoGaInitialized = true;
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    window.gtag = window.gtag || gtag;
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {send_page_view: true});
+
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    document.head.appendChild(tag);
+
+    let referrerHost = 'direct';
+    try { if (document.referrer) referrerHost = new URL(document.referrer).hostname || 'direct'; } catch (e) {}
+    const pageContext = () => ({
+      page_path: window.location.pathname,
+      page_title: document.title,
+      referrer_host: referrerHost,
+      interaction_source: 'website',
+      transport_type: 'beacon'
+    });
+    const sendEvent = (name, extra = {}) => window.gtag('event', name, {...pageContext(), ...extra});
+
+    document.addEventListener('click', event => {
+      const link = event.target.closest && event.target.closest('a[href]');
+      if (!link) return;
+      let target;
+      try { target = new URL(link.href, window.location.href); } catch (e) { return; }
+      const host = target.hostname.toLowerCase();
+      if (host === 'wa.me' || host === 'api.whatsapp.com' || host === 'web.whatsapp.com') {
+        sendEvent('whatsapp_click', {link_host: host});
+      } else if (target.protocol === 'tel:' || target.protocol === 'mailto:') {
+        sendEvent('contact_click', {contact_type: target.protocol.slice(0, -1)});
+      } else if (host === 'maps.google.com' || (host.endsWith('.google.com') && target.pathname.startsWith('/maps')) || host === 'maps.app.goo.gl' || host === 'waze.com' || host.endsWith('.waze.com')) {
+        sendEvent('click_directions', {link_host: host});
+      }
+    }, true);
+
+    document.addEventListener('submit', event => {
+      if (event.target && event.target.id === 'quoteForm') sendEvent('quote_request', {form_id: 'quoteForm'});
+    }, true);
+  })();
