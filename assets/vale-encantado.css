@@ -126,3 +126,8 @@ html[data-theme="light"] .ve-hero h1{color:#000062}
 .ve-address-card p{color:var(--muted)}
 .ve-address-card .btn-white{background:#000062;color:#fff}
 .ve-address-card .btn-white:hover{background:#17176e}
+
+
+/* SEO LOCAL — avaliação e fotos oficiais */
+.ve-map-note{margin:16px 0 0!important;font-size:12px!important;line-height:1.6!important;color:var(--muted)}
+.ve-map-note a{color:var(--accent-text);text-decoration:underline;text-underline-offset:3px;font-weight:700}
