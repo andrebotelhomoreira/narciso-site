@@ -559,3 +559,8 @@ html[data-theme="light"] .cat-hero h1{color:#000062}
   .quote-intro h2{font-size:clamp(56px,13vw,75px)}
   .quote{padding-top:52px}
 }
+
+
+/* SEO LOCAL — link do Perfil da Empresa */
+.gbp-profile-note{margin:15px 0 0!important;font-size:13px!important;line-height:1.7!important;color:var(--muted)}
+.gbp-profile-note .text-link{text-decoration:underline;text-underline-offset:4px}
