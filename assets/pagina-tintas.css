@@ -88,3 +88,30 @@
 @media(max-width:740px){.pt-hero-layout{grid-template-columns:1fr}.pt-hero-copy{padding:52px 24px 43px}.pt-hero h1{font-size:clamp(52px,11vw,73px)}.pt-hero-media{min-height:380px}.pt-strip .container{grid-template-columns:1fr 1fr;gap:16px}.pt-category-grid,.pt-steps{grid-template-columns:1fr}.pt-feature-grid,.pt-quote-grid{grid-template-columns:1fr}.pt-feature-card{max-width:500px}.pt-section{padding:60px 0}.pt-feature-card .pt-value{font-size:110px}.pt-steps{gap:28px}}
 @media(max-width:480px){.pt-hero-copy{padding:47px 18px 40px}.pt-hero h1{font-size:clamp(46px,11vw,57px)}.pt-hero-actions{display:grid;width:100%}.pt-hero-actions .btn{width:100%;white-space:normal}.pt-hero-media{min-height:330px}.pt-strip .container{grid-template-columns:1fr}.pt-section{padding:50px 0}.pt-feature h2,.pt-heading h2,.pt-quote h2{font-size:clamp(40px,10vw,55px)}.pt-quote-form{padding:23px}.pt-feature-card{padding:25px}.pt-step{padding-left:17px}}
 @media(prefers-reduced-motion:reduce){.pt-category,.pt-feature-card{transition:none!important}}
+
+
+/* NARCISO CLEAN — Tintas e Carfort */
+.pt-hero{background:var(--surface);color:var(--ink);border-bottom:1px solid var(--line)}
+.pt-eyebrow,.pt-quote .pt-eyebrow{color:var(--accent-text)}
+.pt-hero h1{color:var(--ink)}
+html[data-theme="light"] .pt-hero h1{color:#000062}
+.pt-hero h1 span{color:var(--accent-text)}
+.pt-hero-lead{color:var(--muted)}
+.pt-hero-location{color:var(--muted)!important;border-top:1px solid var(--line)}
+.pt-hero-location svg{color:var(--accent-text)}
+.pt-hero-location a{color:var(--ink)}
+.pt-hero-actions .pt-outline{color:var(--ink);background:var(--surface);border-color:var(--line)}
+.pt-hero-actions .pt-outline:hover{color:var(--ink);background:var(--surface-soft);border-color:var(--accent-text)}
+.pt-feature{background:var(--paper);color:var(--ink);border-block:1px solid var(--line)}
+.pt-feature h2{color:var(--ink)}
+.pt-feature p,.pt-feature-list li,.pt-feature .pt-caution{color:var(--muted)}
+.pt-feature-card{border:1px solid var(--line);border-top:4px solid #f26b1d;box-shadow:0 12px 30px rgba(6,10,55,.05);background:var(--surface);color:var(--ink)}
+.pt-feature-card .pt-value,.pt-feature-card strong{color:var(--ink)}
+.pt-feature-card p{color:var(--muted)}
+.pt-quote{background:var(--paper);color:var(--ink);border-block:1px solid var(--line)}
+.pt-quote h2{color:var(--ink)}
+.pt-quote p{color:var(--muted)}
+.pt-contact-address{border-top:1px solid var(--line);color:var(--muted)}
+.pt-contact-address a{color:var(--ink)}
+.pt-quote-form{border:1px solid var(--line);border-top:4px solid #f26b1d;box-shadow:0 12px 30px rgba(6,10,55,.06)}
+.pt-category .pt-small,.pt-category a{color:var(--accent-text)}
