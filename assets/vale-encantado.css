@@ -103,3 +103,26 @@
 }
 @media(max-width:360px){.ve-category{grid-template-columns:96px 1fr}.ve-category-copy{padding:14px}.ve-category-copy h3{font-size:24px}.ve-hero h1{font-size:43px}}
 @media(prefers-reduced-motion:reduce){.ve-category,.ve-category-media img,.ve-actions .btn{transition:none!important}}
+
+
+/* NARCISO CLEAN — Vale Encantado */
+.ve-hero{background:var(--surface);color:var(--ink);border-bottom:1px solid var(--line)}
+.ve-kicker,.ve-contact .ve-kicker{color:var(--accent-text)}
+.ve-hero h1{color:var(--ink)}
+html[data-theme="light"] .ve-hero h1{color:#000062}
+.ve-hero h1 span{color:var(--accent-text)}
+.ve-hero-lead,.ve-hero-address{color:var(--muted)}
+.ve-hero-address{border-top-color:var(--line)}
+.ve-hero-address svg{color:var(--accent-text)}
+.ve-actions .btn-outline{color:var(--ink);border:1px solid var(--line);background:var(--surface)}
+.ve-actions .btn-outline:hover{color:var(--ink);background:var(--surface-soft);border-color:var(--accent-text)}
+.ve-contact{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+.ve-contact h2{color:var(--ink)}
+.ve-contact p{color:var(--muted)}
+.ve-contact a[href*="wa.me"]:not(.btn){color:var(--accent-text)!important}
+.ve-form{border:1px solid var(--line);border-top:4px solid #f26b1d;box-shadow:0 12px 30px rgba(6,10,55,.06)}
+.ve-address-card{background:var(--surface-soft);color:var(--ink);border:1px solid var(--line);border-top:4px solid #f26b1d}
+.ve-address-card .ve-label{color:var(--accent-text)}
+.ve-address-card p{color:var(--muted)}
+.ve-address-card .btn-white{background:#000062;color:#fff}
+.ve-address-card .btn-white:hover{background:#17176e}
