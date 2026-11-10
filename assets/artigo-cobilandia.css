@@ -94,3 +94,22 @@ html[data-theme=dark] .pst-article a:not(.btn){color:#ffb27c}
 .pst-end .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.pst-related-grid a{transition:none}}
+
+
+/* NARCISO CLEAN — blog e guias de reforma */
+.pst-hero{background:var(--surface);color:var(--ink);border-bottom:1px solid var(--line)}
+.pst-kicker{color:var(--accent-text)}
+.pst-hero h1{color:var(--ink)}
+html[data-theme="light"] .pst-hero h1{color:#000062}
+.pst-hero h1 em{color:var(--accent-text)}
+.pst-hero-lead,.pst-byline{color:var(--muted)}
+.pst-byline{border-top:1px solid var(--line)}
+.pst-side-card{background:var(--surface-soft);color:var(--ink);border:1px solid var(--line);border-top:4px solid #f26b1d}
+.pst-side-card span{color:var(--accent-text)}
+.pst-side-card h2{color:var(--ink)}
+.pst-side-card p{color:var(--muted)}
+.pst-end{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+.pst-end h2{color:var(--ink)}
+.pst-end p{color:var(--muted)}
+.pst-figure{background:#070748}
+.pst-toc a:hover{color:var(--accent-text)}
