@@ -1,0 +1,9 @@
+
+.cat-hero--construction .cat-hero-image--construction{display:flex;align-items:stretch;background:#ded1c0}.cat-hero--construction .cat-hero-image--construction::after{display:none}
+.cat-hero--construction .construction-art{width:100%;height:100%;min-height:430px;padding:clamp(35px,5vw,75px)}
+.cat-hero--construction .construction-art strong{font-size:clamp(55px,7vw,105px)}
+.cat-hero--construction .construction-art-kicker{font-size:12px}.cat-hero--construction .construction-art-stack{max-width:330px;gap:10px}.cat-hero--construction .construction-art-stack span{height:44px}
+.cat-hero--construction .construction-art small{font-size:12px}.cat-hero--construction .cat-hero-copy{padding-right:clamp(20px,3vw,55px)}
+.construction-list article{border:1px solid var(--line);border-top:3px solid var(--orange)}
+.construction-safety-note{max-width:850px;margin:28px 0 0;color:var(--muted);font-size:13px;line-height:1.75}
+@media(max-width:700px){.cat-hero--construction .cat-hero-image--construction{min-height:295px}.cat-hero--construction .construction-art{min-height:295px;padding:28px}.cat-hero--construction .construction-art strong{font-size:clamp(48px,12vw,72px)}.cat-hero--construction .construction-art-stack{max-width:220px}.cat-hero--construction .construction-art-stack span{height:28px}}

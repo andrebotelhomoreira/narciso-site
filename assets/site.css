@@ -564,3 +564,19 @@ html[data-theme="light"] .cat-hero h1{color:#000062}
 /* SEO LOCAL — link do Perfil da Empresa */
 .gbp-profile-note{margin:15px 0 0!important;font-size:13px!important;line-height:1.7!important;color:var(--muted)}
 .gbp-profile-note .text-link{text-decoration:underline;text-underline-offset:4px}
+
+/* Construção e alvenaria: arte editorial em CSS, sem fotos ou preços fictícios */
+.construction-card-cover{display:block;overflow:hidden}
+.construction-art{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;height:100%;min-height:100%;padding:clamp(19px,3vw,38px);overflow:hidden;background:linear-gradient(145deg,#eae3d8 0%,#d8c9b4 100%);color:#302b29}
+.construction-art::after{content:"";position:absolute;inset:auto -10% -28% 40%;height:75%;border-radius:50%;background:rgba(255,255,255,.22);z-index:-1}
+.construction-art-kicker{font-family:var(--body);font-size:10px;font-weight:800;letter-spacing:.13em;color:#7a5637}
+.construction-art-stack{display:grid;width:76%;max-width:245px;grid-template-columns:repeat(3,1fr);gap:5px;margin:24px 0;transform:rotate(-8deg)}
+.construction-art-stack span{height:25px;border-radius:2px;background:#a6623f;box-shadow:inset 0 -4px 0 rgba(65,34,22,.2)}
+.construction-art-stack span:nth-child(2n){background:#c27d52}.construction-art-stack span:nth-child(3n){background:#9b5736}
+.construction-art strong{font-family:var(--heading);font-size:clamp(28px,3.2vw,55px);font-weight:800;line-height:.88;letter-spacing:-.025em}
+.construction-art small{font-size:clamp(8px,.8vw,11px);line-height:1.4;font-weight:750;letter-spacing:.04em;margin-top:15px;color:#684a37}
+.product-card--construction .construction-card-cover{aspect-ratio:4/4.45}
+.construction-hub-cover{display:block;aspect-ratio:4/3}
+.ve-category--construction .construction-hub-cover{aspect-ratio:auto}
+.ve-category--construction .construction-art{min-height:230px}
+@media(max-width:700px){.product-card--construction .construction-card-cover{aspect-ratio:4/4.4}.construction-art{padding:23px}.construction-art strong{font-size:clamp(37px,10vw,53px)}.construction-art-stack{margin:19px 0}.ve-category--construction .construction-art{min-height:200px}}
