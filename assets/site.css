@@ -581,8 +581,8 @@ html[data-theme="light"] .cat-hero h1{color:#000062}
 .ve-category--construction .construction-art{min-height:230px}
 @media(max-width:700px){.product-card--construction .construction-card-cover{aspect-ratio:4/4.4}.construction-art{padding:23px}.construction-art strong{font-size:clamp(37px,10vw,53px)}.construction-art-stack{margin:19px 0}.ve-category--construction .construction-art{min-height:200px}}
 
-/* CIMENTO NASSAU: foto fornecida via referência externa */
+/* Cimento Nassau: imagem aprovada, servida pelo Image CDN da Netlify */
 .construction-card-cover,.construction-hub-cover,.cat-hero-image--construction{position:relative;overflow:hidden}
-.construction-photo{display:block;position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center center;background:#e7e3dc}
+.construction-photo{display:block;position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:contain;object-position:center center;background:#e7e3dc}
 .construction-photo[hidden]{display:none!important}
 .cat-hero-image--construction .construction-photo{object-fit:contain;background:#e7e3dc}
