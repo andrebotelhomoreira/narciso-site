@@ -112,7 +112,7 @@
 <details><summary>Onde fica a Narciso Material de Construção no Vale Encantado?</summary><p>A loja fica na Rua Barra Nova, 195, bairro Vale Encantado, Vila Velha – ES, CEP 29113-040. Você pode abrir a rota no Google Maps pelo botão desta página.</p></details>
 <details><summary>Posso pedir orçamento de materiais de construção pelo WhatsApp?</summary><p>Sim. Envie a lista dos materiais, especificações e quantidades para o WhatsApp (27) 99925-9494. A equipe confirma os preços e as opções disponíveis.</p></details>
 <details><summary>Que tipos de materiais posso consultar?</summary><p>No site, a Narciso apresenta ferramentas, tintas e pintura, materiais elétricos, soluções hidráulicas e itens para pisos e revestimentos. Consulte a disponibilidade do produto específico antes de se deslocar.</p></details>
-<details><summary>A Narciso faz entrega no Vale Encantado?</summary><p>As condições de entrega, os prazos e os valores precisam ser confirmados diretamente com a equipe, de acordo com o pedido e o endereço.</p></details>
+<details><summary>A Narciso faz entrega no Vale Encantado?</summary><p>A Narciso não cobra frete nos bairros atendidos. Envie o bairro ou endereço no momento do orçamento para confirmar se a entrega gratuita está disponível na região e consultar o prazo.</p></details>
 <details><summary>Posso enviar fotos ou uma lista do pedreiro para pedir orçamento?</summary><p>Sim. Você pode abrir a conversa no WhatsApp e enviar a lista escrita ou imagens com as informações do item que procura. Isso facilita identificar os produtos.</p></details>
 <details><summary>Como saber se um produto está disponível na loja?</summary><p>Este site não mostra estoque em tempo real. Envie o nome do produto, marca, modelo ou medida pelo WhatsApp para receber a confirmação.</p></details>
 </div></div></section>
@@ -133,7 +133,7 @@ document.getElementById('ve-quote-form').addEventListener('submit',function(even
  items.removeAttribute('aria-invalid');error.hidden=true;
  const name=document.getElementById('ve-name').value.trim();
  const category=document.getElementById('ve-type').value;
- const message=['Olá! Vim pela página de material de construção no Vale Encantado da Narciso.','Gostaria de consultar um orçamento para minha obra/reforma.',name?'Meu nome: '+name:null,'Categoria: '+category,'Materiais:\n'+detail,'Podem confirmar preço e disponibilidade?'].filter(Boolean).join('\n\n');
+ const message=['Olá! Vim pela página de material de construção no Vale Encantado da Narciso.','Gostaria de consultar um orçamento para minha obra/reforma.',name?'Meu nome: '+name:null,'Categoria: '+category,'Materiais:\n'+detail,'Podem confirmar preço, disponibilidade e se meu bairro está na área de entrega sem frete?'].filter(Boolean).join('\n\n');
  window.location.href='https://wa.me/5527999259494?text='+encodeURIComponent(message);
 });
 document.getElementById('ve-items').addEventListener('input',function(){if(this.value.trim()){this.removeAttribute('aria-invalid');document.getElementById('ve-form-error').hidden=true;}});
