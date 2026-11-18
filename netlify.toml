@@ -1,6 +1,7 @@
 # Narciso Material de Construção — site estático sem build
 [build]
-  publish = "."
+  command = "node scripts/build-blog.mjs"
+  publish = "dist"
 
 # Consolidate HTTP/HTTPS and www variants on the official HTTPS apex host.
 [[redirects]]

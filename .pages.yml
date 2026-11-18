@@ -1,0 +1,84 @@
+# Narciso Material de Construção — Pages CMS
+# Editar em https://app.pagescms.org com o GitHub autorizado.
+# Os novos artigos ficam em JSON e são transformados em HTML pelo Netlify.
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: artigos
+    label: Artigos novos do blog
+    type: collection
+    path: content/artigos
+    format: json
+    filename: "{slug}.json"
+    view:
+      primary: title
+      fields: [title, published, date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Título visível (H1)
+        type: string
+        required: true
+        options:
+          maxlength: 110
+      - name: slug
+        label: Endereço do artigo (sem barras ou acentos)
+        type: string
+        required: true
+        description: "Exemplo: como-calcular-tinta-para-parede. Evite alterar depois da publicação."
+      - name: published
+        label: Publicar no site
+        type: boolean
+        default: false
+      - name: date
+        label: Data de publicação
+        type: date
+        default: ""
+        options:
+          format: yyyy-MM-dd
+      - name: meta_title
+        label: Título SEO (até 65 caracteres)
+        type: string
+        required: true
+        options:
+          maxlength: 70
+      - name: description
+        label: Meta description (até 160 caracteres)
+        type: text
+        required: true
+      - name: excerpt
+        label: Resumo do cartão do blog
+        type: text
+        required: true
+      - name: category
+        label: Categoria editorial
+        type: string
+        default: Guias de construção
+      - name: cover
+        label: Imagem de capa
+        type: image
+      - name: cover_alt
+        label: Descrição acessível da capa
+        type: string
+      - name: body
+        label: Conteúdo do artigo
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "cms: cria {path}"
+      update: "cms: atualiza {path}"
+      delete: "cms: remove {path}"
