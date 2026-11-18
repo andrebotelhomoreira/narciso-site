@@ -113,3 +113,17 @@ html[data-theme="light"] .pst-hero h1{color:#000062}
 .pst-end p{color:var(--muted)}
 .pst-figure{background:#070748}
 .pst-toc a:hover{color:var(--accent-text)}
+
+
+/* Pages CMS — estilização dos novos artigos, sem afetar os guias anteriores */
+.cms-article ul,.cms-article ol{margin:22px 0 30px;padding-left:25px;color:var(--ink)}
+.cms-article li{font-size:15px;line-height:1.8;padding:4px 0}
+.cms-article blockquote{border-left:4px solid var(--accent-text,#b3480d);padding:14px 24px;background:var(--paper);margin:25px 0}
+.cms-article blockquote p{margin:0}
+.cms-article hr{border:0;border-top:1px solid var(--line);margin:35px 0}
+.cms-article .cms-inline-image{margin:25px 0;max-width:100%}
+.cms-article .cms-inline-image img{display:block;width:100%;height:auto;border-radius:3px}
+.cms-article p>.btn{color:#fff!important;text-decoration:none!important;display:inline-flex}
+.cms-article h2,.cms-article h3{scroll-margin-top:115px}
+.cms-article code{background:var(--paper);padding:2px 5px;border-radius:2px;overflow-wrap:anywhere}
+@media(max-width:700px){.cms-article ul,.cms-article ol{padding-left:22px}.cms-article li{font-size:14px}}
