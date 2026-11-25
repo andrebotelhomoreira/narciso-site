@@ -76,8 +76,6 @@
 
     const tag = document.createElement('script');
     tag.async = true;
-    // GA4 continua assíncrono, com prioridade baixa para não competir com a primeira tela.
-    tag.fetchPriority = 'low';
     tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
     document.head.appendChild(tag);
 
