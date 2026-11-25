@@ -141,7 +141,8 @@ function main(){
  const homeCssLink='<link href="assets/site.css" rel="stylesheet"/>';
  check(homeHtml.includes(homeCssLink),"Link CSS da Home não encontrado para inline");
  const homeCssText=fs.readFileSync(homeCss,"utf8").replace(/<\/style/gi,"<\\/style");
- homeHtml=homeHtml.replace(homeCssLink,'<style id="home-inline-css">\\n'+homeCssText+'\\n</style>');
+ const nl=String.fromCharCode(10);
+ homeHtml=homeHtml.replace(homeCssLink,'<style id="home-inline-css">'+nl+homeCssText+nl+'</style>');
  fs.writeFileSync(homeFile,homeHtml);
  const posts=[];
  if(fs.existsSync(ARTICLES))for(const name of fs.readdirSync(ARTICLES).sort()){
