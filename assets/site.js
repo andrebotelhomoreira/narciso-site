@@ -74,33 +74,12 @@
     window.gtag('js', new Date());
     window.gtag('config', measurementId, {send_page_view: true});
 
-    // Mantém page_view e eventos na fila, mas evita competir com o LCP inicial.
-    // O script externo entra após o load/idle ou na primeira interação do visitante.
-    let tagRequested = false;
-    const loadTag = () => {
-      if (tagRequested) return;
-      tagRequested = true;
-      const tag = document.createElement('script');
-      tag.async = true;
-      tag.fetchPriority = 'low';
-      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
-      document.head.appendChild(tag);
-    };
-    const scheduleTag = () => {
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(loadTag, {timeout: 2500});
-      } else {
-        window.setTimeout(loadTag, 1500);
-      }
-    };
-    if (document.readyState === 'complete') {
-      scheduleTag();
-    } else {
-      window.addEventListener('load', scheduleTag, {once: true});
-    }
-    ['pointerdown', 'keydown', 'touchstart'].forEach(type => {
-      document.addEventListener(type, loadTag, {once: true, passive: true});
-    });
+    const tag = document.createElement('script');
+    tag.async = true;
+    // Mantém o GA4 assíncrono, mas abaixo dos recursos críticos da primeira tela.
+    tag.fetchPriority = 'low';
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    document.head.appendChild(tag);
 
     let referrerHost = 'direct';
     try { if (document.referrer) referrerHost = new URL(document.referrer).hostname || 'direct'; } catch (e) {}
