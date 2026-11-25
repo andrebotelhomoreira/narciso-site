@@ -133,6 +133,16 @@ function sitemap(posts){
 function main(){
  check(fs.existsSync("index.html")&&fs.existsSync("sitemap.xml"),"Home ou sitemap não encontrados");
  fs.rmSync(OUT,{force:true,recursive:true});fs.mkdirSync(OUT,{recursive:true});copy(ROOT,OUT);
+ // Inline the shared stylesheet only on the homepage to remove its render-blocking request.
+ // Other pages keep the cacheable external stylesheet; source index.html remains maintainable.
+ const homeFile=path.join(OUT,"index.html"),homeCss=path.join(OUT,"assets/site.css");
+ check(fs.existsSync(homeFile)&&fs.existsSync(homeCss),"Home ou CSS ausente para inline");
+ let homeHtml=fs.readFileSync(homeFile,"utf8");
+ const homeCssLink='<link href="assets/site.css" rel="stylesheet"/>';
+ check(homeHtml.includes(homeCssLink),"Link CSS da Home não encontrado para inline");
+ const homeCssText=fs.readFileSync(homeCss,"utf8").replace(/<\/style/gi,"<\\/style");
+ homeHtml=homeHtml.replace(homeCssLink,'<style id="home-inline-css">\\n'+homeCssText+'\\n</style>');
+ fs.writeFileSync(homeFile,homeHtml);
  const posts=[];
  if(fs.existsSync(ARTICLES))for(const name of fs.readdirSync(ARTICLES).sort()){
   if(!name.endsWith(".json"))continue;
